@@ -1,0 +1,41 @@
+<!doctype html>
+
+<head>
+	
+	<title>lanandra BMI Calculator</title>
+	
+</head>
+
+<h1>lanandra BMI Calculator</h1>
+
+<body>
+
+<div>
+	<form method="POST" action="/">
+	Height (cm): <br>
+	<input type="text" name="height"><br>
+	Weight (kg): <br>
+	<input type="text" name="weight"><br>
+	<button type="submit" value="Submit">Submit</button>
+	</form>
+</div>
+
+<br>
+
+<div>
+	{% if bmi %}
+	    <p>
+        {% print("BMI : {}.".format(bmi)) %}
+        </p>
+	{% endif %}
+</div>
+
+<div>
+	{% if label %}
+	    <p>
+        {% print("BMI Label : {}.".format(label)) %}
+        </p>
+	{% endif %}
+</div>
+
+</body>
