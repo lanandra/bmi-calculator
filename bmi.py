@@ -1,3 +1,5 @@
+# bmi.py
+
 # get user input for height and weight
 def user_input():
     height = float(input("Height (cm): "))
