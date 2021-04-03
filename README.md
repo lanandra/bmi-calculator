@@ -23,7 +23,7 @@ Before use this application, please make sure you have been installed these prer
 
         python -r requirements.txt  
 
-3. Run main.py. This command will execute and run application as web server  
+3. For development, run main.py. This command will execute and run application as development web server  
 
     On Linux:  
 
@@ -33,7 +33,17 @@ Before use this application, please make sure you have been installed these prer
 
         python main.py  
 
-4. From your web browser access the application. Default port is 5000.  
+4. For production web server, execute this command:  
+
+    On Linux:
+    
+        gunicorn -b 0.0.0.0:5000 wsgi:app  
+
+    On Windows:  
+
+        waitress-serve --listen=0.0.0.0:5000 wsgi:app  
+
+5. From your web browser access the application. Default port is 5000.  
 
     Example: localhost:5000  
 
@@ -48,6 +58,10 @@ Before use this application, please make sure you have been installed these prer
    Example: You can run this container on detached mode and run on default port 5000
 
         docker run -d -p 5000:5000 --name bmi-calculator lanandra/bmi-calculator:latest  
+
+3. From your web browser access the application. Default port is 5000.  
+
+    Example: localhost:5000 
 
 ### For CLI Junkie  
 
