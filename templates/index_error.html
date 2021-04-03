@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index_error.html -->
 
 <!doctype html>
 
@@ -25,19 +25,7 @@
 <br>
 
 <div>
-	{% if bmi %}
-	    <p>
-        {% print("BMI : {}.".format(bmi)) %}
-        </p>
-	{% endif %}
-</div>
-
-<div>
-	{% if label %}
-	    <p>
-        {% print("BMI Label : {}.".format(label)) %}
-        </p>
-	{% endif %}
+    {% print("Wrong input. Please fill height and weight in number") %}
 </div>
 
 </body>

@@ -10,12 +10,15 @@ app = Flask(__name__)
 def index():
     bmi = ""
     label = ""
-    if request.method == "POST" and "weight" in request.form:   
-        height = float(request.form.get("height"))
-        weight = float(request.form.get("weight"))
-        bmi = bmi_calculation(height, weight)
-        label = bmi_label(bmi)
-    return render_template("index.html", bmi=bmi, label=label)
+    try:
+        if request.method == "POST" and "weight" in request.form:   
+            height = float(request.form.get("height"))
+            weight = float(request.form.get("weight"))
+            bmi = bmi_calculation(height, weight)
+            label = bmi_label(bmi)
+        return render_template("index.html", bmi=bmi, label=label)
+    except:
+        return render_template("index_error.html")
 
 # calculate BMI based on user weight and height
 def bmi_calculation(height, weight):
