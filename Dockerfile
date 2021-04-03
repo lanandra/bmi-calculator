@@ -15,4 +15,4 @@ COPY . /usr/local/lib/python3.7/site-packages/bmi-calculator
 WORKDIR /usr/local/lib/python3.7/site-packages/bmi-calculator
 
 # Run application
-CMD ["python", "main.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "wsgi:app"]
