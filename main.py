@@ -6,6 +6,7 @@ from flask import request, render_template
 app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
+# Get user input
 def index():
     bmi = ""
     label = ""
@@ -16,9 +17,11 @@ def index():
         label = bmi_label(bmi)
     return render_template("index.html", bmi=bmi, label=label)
 
+# calculate BMI based on user weight and height
 def bmi_calculation(height, weight):
     return round(weight / (height / 100) ** 2, 2)
 
+# set BMI label based on user BMI 
 def bmi_label(bmi):
     if bmi < 18.5:
         label = "Underweight"
