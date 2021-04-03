@@ -34,7 +34,7 @@ jobs:
         name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: lanandra/acakin
+          name: lanandra/bmi-calculator
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
