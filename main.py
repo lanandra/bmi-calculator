@@ -10,7 +10,7 @@ def index():
     bmi = ""
     label = ""
     try:
-        if request.method == "POST" and "weight" in request.form:   
+        if request.method == "POST" and "height" and "weight" in request.form:   
             height = float(request.form.get("height"))
             weight = float(request.form.get("weight"))
             bmi = bmi_calculation(height, weight)
