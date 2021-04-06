@@ -74,3 +74,34 @@ Before use this application, please make sure you have been installed these prer
     On Windows  
 
         python bmi.py
+
+### REST API  
+
+If you need REST API service from this application, you can use this method:  
+
+1. Before passing directly from browser, you can test using application such as Postman  
+
+2. Pass height and weight arguments use POST method. URL for api is  
+
+        http://localhost:5000/api  
+
+3. Example of usage
+
+        http://localhost:5000/api?height=167&weight=70  
+
+4. Example of output  
+
+        {
+        "bmi": 25.1,
+        "label": "Overweight"
+        }  
+
+### heroku mock up lab  
+
+If you are interesting to preview the feature for this app, please check heroku deployment on this link:  
+
+Main application: [https://lanandra-bmi-calculator.herokuapp.com/](https://lanandra-bmi-calculator.herokuapp.com/)  
+  
+REST API: https://lanandra-bmi-calculator.herokuapp.com/api?height=float&weight=float  
+Change height and weight for your input, example:  
+[https://lanandra-bmi-calculator.herokuapp.com/api?height=167&weight=70](https://lanandra-bmi-calculator.herokuapp.com/api?height=167&weight=70)
